@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" />
+    <title>Pronote - AutoLogin</title>
+    <script>
+      function loginForm() {
+        document.myform.submit();
+        document.myform.action = "https://ent.iledefrance.fr/auth/login";
+      }
+    </script>
+    <style type="text/css">
+      body {
+        background-image: url("https://cdn.crunchify.com/bg.png");
+      }
+    </style>
+  </head>
+  <body onload="loginForm()">
+    <form method="post" action="https://ent.iledefrance.fr/auth/login">
+      <input type="text" name="email" value="" />
+      <input type="password" name="password" value="" />
+      <input id="tktgro" type="submit" value="Login" />
+    </form>
+
+    <script>
+      document.getElementById("tktgro").click();
+    </script>
+  </body>
+</html>
